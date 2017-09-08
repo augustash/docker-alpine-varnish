@@ -1,0 +1,19 @@
+version: "3"
+services:
+  alpine-varnish:
+    build:
+      context: .
+    image: augustash/alpine-varnish
+    labels:
+      - "com.augustash.description=August Ash Alpine Varnish Image"
+      - "com.augustash.development-only"
+    depends_on:
+      - web
+    ports:
+      - "8080:80"
+    environment:
+      - VARNISH_STORAGE=malloc,32M
+  web:
+    image: augustash/alpine-nginx
+    environment:
+      - NGINX_DH_SIZE=128

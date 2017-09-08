@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+VARNISH_LOG_FORMAT=${VARNISH_LOG_FORMAT:-"%{x-forwarded-for}i - %u %t \"%r\" %s %b %T \"%{Referer}i\" \"%{User-agent}i\" [%{Varnish:handling}x]"}
+
+exec \
+    varnishncsa -F "${VARNISH_LOG_FORMAT}"

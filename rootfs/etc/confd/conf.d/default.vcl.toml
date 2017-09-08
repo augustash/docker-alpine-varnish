@@ -1,0 +1,11 @@
+[template]
+# Conifguration template
+src   = "default.vcl.tmpl"
+
+# Rendered configuration file location
+dest  = "/etc/varnish/default.vcl"
+
+# File ownership
+owner = "ash"
+group = "ash"
+mode  = "0644"
