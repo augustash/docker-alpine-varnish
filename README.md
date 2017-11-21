@@ -6,7 +6,8 @@
 
 ## Versions
 
-- `1.0.0`, `latest` [(Dockerfile)](https://github.com/augustash/docker-alpine-varnish/blob/1.0.0/Dockerfile)
+- `1.0.1`, `latest` [(Dockerfile)](https://github.com/augustash/docker-alpine-varnish/blob/1.0.1/Dockerfile)
+- `1.0.0` [(Dockerfile)](https://github.com/augustash/docker-alpine-varnish/blob/1.0.0/Dockerfile)
 
 [See VERSIONS.md for image contents.](https://github.com/augustash/docker-alpine-varnish/blob/master/VERSIONS.md)
 
@@ -16,7 +17,7 @@ Launch an application container and Varnish container that serves content proxie
 
 ```bash
 docker run --rm \
-    --name app
+    --name app \
     --net <NETWORK NAME> \
     -v $(pwd):/src \
     augustash/alpine-nginx
@@ -25,7 +26,7 @@ docker run --rm \
     -p 8080:80 \
     --link <APP CONTAINER>:app \
     --net <NETWORK NAME> \
-    -e VARNISH_BACKEND_HOST=app
+    -e VARNISH_BACKEND_HOST=app \
     -v $(pwd)/varnish.template:/etc/varnish/default.vcl \
     augustash/alpine-varnish
 ```
