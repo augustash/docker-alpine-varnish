@@ -1,4 +1,4 @@
-FROM augustash/alpine-base-s6:1.0.0
+FROM augustash/alpine-base-s6:1.0.1
 
 # environment
 ENV VARNISH_VCL_CONF="/etc/varnish/default.vcl" \
@@ -19,7 +19,6 @@ COPY rootfs /
 
 # external
 EXPOSE 80 6081 6082
-VOLUME ["/var/lib/varnish"]
 
 # run s6 supervisor
 ENTRYPOINT ["/init"]

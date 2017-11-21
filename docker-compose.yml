@@ -12,7 +12,7 @@ services:
     ports:
       - "8080:80"
     environment:
-      - VARNISH_STORAGE=malloc,32M
+      - VARNISH_CACHE_SIZE=32M
   web:
     image: augustash/alpine-nginx
     environment:
