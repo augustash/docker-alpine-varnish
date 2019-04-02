@@ -4,9 +4,23 @@ This file contains all software versions used within a version of the image itse
 
 ## Latest
 
-Same as v3.0.0.
+Same as v4.0.0.
 
 Usage: `augustash/alpine-varnish` or `augustash/alpine-varnish:latest`.
+
+## v4.0.0
+
+- [augustash/alpine-base-s6](https://github.com/augustash/docker-alpine-base-s6/tree/4.0.0): v4.0.0
+- [alpinelinux](https://github.com/alpinelinux/docker-alpine/tree/v3.9): v3.9
+- [varnish](https://varnish-cache.org/): v6.1.1-r0
+
+*Improvements:*
+
+- Updates to Alpine Linux v3.9.
+- Updates to Base S6 v4.0.0.
+- Updates to Varnish v6.1.1.
+
+Usage: `augustash/alpine-varnish:4.0.0`.
 
 ## v3.0.0
 
@@ -18,7 +32,7 @@ Usage: `augustash/alpine-varnish` or `augustash/alpine-varnish:latest`.
 
 - Updates to Alpine Linux v3.8.
 - Updates to Base S6 v3.0.0.
-- Updates to Varnish v6.0.2
+- Updates to Varnish v6.0.2.
 
 Usage: `augustash/alpine-varnish:3.0.0`.
 
