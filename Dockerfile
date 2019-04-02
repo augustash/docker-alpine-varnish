@@ -1,4 +1,4 @@
-FROM augustash/alpine-base-s6:1.0.2
+FROM augustash/alpine-base-s6:2.1.0
 
 # environment
 ENV VARNISH_VCL_CONF="/etc/varnish/default.vcl" \
