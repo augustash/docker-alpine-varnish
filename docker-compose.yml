@@ -3,7 +3,7 @@ services:
   alpine-varnish:
     build:
       context: .
-    image: augustash/alpine-varnish:2.0.0
+    image: augustash/alpine-varnish:3.0.0
     labels:
       - "com.augustash.description=August Ash Alpine Varnish Image"
       - "com.augustash.development-only"
